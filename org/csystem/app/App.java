@@ -1,12 +1,9 @@
 package org.csystem.app;
 
-import org.csystem.app.simulation.craps.CrapsSimulationApp;
-import org.csystem.app.simulation.lotto.LottoProbabilitySimulationApp;
+import org.csystem.app.lottery.NumericLotteryApp;
 
-class App {
-
+public class App{
     public static void main(String[] args) {
-		LottoProbabilitySimulationApp.run();
-
+        NumericLotteryApp.run();
     }
 }
