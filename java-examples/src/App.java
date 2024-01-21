@@ -13,6 +13,12 @@ public class App{
         Date d3 = new Date(d1.getTime() + 2 * oneHourMilliseconds);
         Date d4 = new Date(d1.getTime() + 3 * oneHourMilliseconds);
         Date d5 = new Date(d1.getTime() + 4 * oneHourMilliseconds);
+
+
+
+
+
+
         CarPark carPark = new CarPark(10, 5);
         Vehicle v1 = new Vehicle("34KG3916", 4);
         Vehicle v2 = new Vehicle("34GV8993", 2);
