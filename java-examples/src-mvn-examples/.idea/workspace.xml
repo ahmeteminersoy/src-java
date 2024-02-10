@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cd81c48e-6229-4a3c-a635-decc2bb37c9a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../java-examples/src/java-examples.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-examples/java-examples.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-examples/out/production/java-examples/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-examples/out/production/java-examples/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-examples/out/production/java-examples/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-examples/out/production/java-examples/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-examples/out/production/java-examples/example/app/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-examples/out/production/java-examples/example/app/addingOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-examples/src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java-examples/src/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-examples/src/example/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-examples/src/example/app/App.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2bc9Y4rwAEq0ccxlvTNbvkk8mhm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/ahmeteminersoy/Documents/src/src-java/maven-project-example"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-8336523bb0d9-55c9c8bc" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd81c48e-6229-4a3c-a635-decc2bb37c9a" name="Changes" comment="" />
+      <created>1706503543914</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706503543914</updated>
+    </task>
+    <servers />
+  </component>
+</project>
