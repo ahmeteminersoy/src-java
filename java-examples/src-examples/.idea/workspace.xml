@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8feb05f-e1bf-41eb-a5e1-583736600500" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/example/app/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/App.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,5 +120,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/src_examples$Test.ic" NAME="Test Coverage Results" MODIFIED="1709574846780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>example.app.*</FILTER>
+    </SUITE>
   </component>
 </project>
