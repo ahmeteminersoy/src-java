@@ -5,38 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8feb05f-e1bf-41eb-a5e1-583736600500" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/app/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-examples.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/java-examples/java-examples.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../maven-project-example/.idea/maven-project-example.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../maven-project-example/mvnproject/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../maven-project-example/mvnproject/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../maven-project-example/mvnproject/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../maven-project-example/mvnproject/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../maven-project-example/mvnproject/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../maven-project-example/mvnproject/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../maven-project-example/mvnproject/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../maven-project-example/mvnproject/src/main/java/example/app/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../maven-project-example/mvnproject/src/main/java/example/app/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../maven-project-example/mvnproject/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../maven-project-example/mvnproject/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../maven-project-example/mvnproject/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../maven-project-example/mvnproject/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-examples.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/java-examples/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/java-examples/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/java-examples/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/java-examples/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/java-examples/example/app/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/java-examples/example/app/addingOperation.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/app/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/App.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -52,13 +37,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Test.executor": "Run",
     "Application.example.app.App.executor": "Run",
+    "Application.org.csystem.app.App.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ahmeteminersoy/Documents/src/src-java/java-examples/src",
-    "project.structure.last.edited": "Project",
+    "last_opened_file_path": "/Users/ahmeteminersoy/Documents/src/src-java/java-examples/src-examples",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   },
@@ -126,5 +114,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassCastException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
