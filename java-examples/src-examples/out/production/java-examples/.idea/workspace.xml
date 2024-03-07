@@ -5,11 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8feb05f-e1bf-41eb-a5e1-583736600500" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/example/app/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/app/TestCodeApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/RegularEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/RegularEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/SalesEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/SalesEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/java-examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/SalesEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/SalesEmployee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Test.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +53,8 @@
     "Application.App.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.Test.executor": "Run",
+    "Application.TestApp.executor": "Run",
+    "Application.TestCodeApp.executor": "Run",
     "Application.example.app.App.executor": "Run",
     "Application.org.csystem.app.App.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -124,5 +140,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/src_examples$Test.ic" NAME="Test Coverage Results" MODIFIED="1709574846780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>example.app.*</FILTER>
+    </SUITE>
   </component>
 </project>

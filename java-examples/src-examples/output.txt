@@ -1,0 +1,3 @@
+Departments:
+Department [departmentId=1, departmentName=Accounting]
+Department [departmentId=2, departmentName=Marketing]

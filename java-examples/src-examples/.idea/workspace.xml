@@ -5,7 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8feb05f-e1bf-41eb-a5e1-583736600500" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/example/app/TestCodeApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/RegularEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/RegularEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/SalesEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/SalesEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Developer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Developer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Project.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/RegularEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/RegularEmployee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/SalesEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/SalesEmployee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Test.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,15 +50,21 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2bYfaFj0JFTFWASePckqRBFjMAG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.App.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.Test.executor": "Run",
+    "Application.TestApp.executor": "Run",
+    "Application.TestCodeApp.executor": "Run",
     "Application.example.app.App.executor": "Run",
     "Application.org.csystem.app.App.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -111,6 +141,9 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -118,6 +151,11 @@
           <properties class="java.lang.ClassCastException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/example/app/TestCodeApp.java</url>
+          <line>211</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

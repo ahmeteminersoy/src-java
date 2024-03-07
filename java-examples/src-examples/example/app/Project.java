@@ -1,6 +1,7 @@
 package example.app;
 
 import java.util.Calendar;
+import java.util.Objects;
 
 public class Project {
     private String projectName;
@@ -15,9 +16,9 @@ public class Project {
     public Project(String projectName, Calendar startDate, String state) {
         this.projectName = projectName;
         this.startDate = startDate;
-        if (state == "Open")
+        if (state.equals("Open"))
             this.state = true;
-        else if (state == "Close") {
+        else if (state.equals("Close")) {
             this.state=false;
 
         }
@@ -56,8 +57,29 @@ public class Project {
     public Calendar getStartDate() {
         return startDate;
     }
+    private static String formatCalendar(Calendar cal) {
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        int month = cal.get(Calendar.MONTH) + 1; // Ay 0'dan başlar, bu yüzden 1 ekleyin
+        int year = cal.get(Calendar.YEAR);
+
+        // İki haneli gün ve ay varsa önlerine sıfır ekle
+        String dayStr = String.format("%02d", day);
+        String monthStr = String.format("%02d", month);
+
+        // Tarihi dd/mm/yyyy formatında döndür
+        return dayStr + "/" + monthStr + "/" + year;
+    }
 
     public void setStartDate(Calendar startDate) {
         this.startDate = startDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Project [" +
+                "projectName='" + projectName + '\'' +
+                ", startDate=" + formatCalendar(startDate) +
+                ", state=" + state +
+                ']';
     }
 }

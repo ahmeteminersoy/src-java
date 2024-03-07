@@ -75,11 +75,20 @@ public class Employee extends Person{
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return super.toString() +"\nEmployee Info[" +
                 "salary=" + salary +
-                ", hireDate=" + hireDate +
-                ", department=" + department +
-                ", numberofEmployees=" + numberofEmployees +
-                '}';
+                ", hireDate=" + getHireDate(hireDate) +
+                ']';
+    }
+    private static String getHireDate(Calendar cal)
+    {
+        String result = "";
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        int month = cal.get(Calendar.MONTH) + 1;
+        int year = cal.get(Calendar.YEAR);
+        String dayStr = String.format("%02d", day);
+        String monthStr = String.format("%02d", month);
+
+        return dayStr + "/" + monthStr + "/" + year;
     }
 }

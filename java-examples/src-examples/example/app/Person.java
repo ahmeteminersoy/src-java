@@ -1,6 +1,7 @@
 package example.app;
 
 import java.util.Calendar;
+import java.util.Objects;
 
 public class Person
 {
@@ -25,18 +26,15 @@ public class Person
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        if(gender == "Woman")
-            this.gender = 1;
-        else if(gender == "Man")
-            this.gender = 2;
+        setGender(gender);
         this.birthDate = birthDate;
-        if (maritalStatus == "Single")
+        if (maritalStatus.equals("Single"))
             this.maritalStatus = 1;
-        else if (maritalStatus == "Married")
+        else if (maritalStatus.equals("Married"))
             this.maritalStatus = 2;
-        if (hasDriverLicence == "Yes")
+        if (hasDriverLicence.equals("Yes"))
             this.hasDriverLicence = true;
-        if (hasDriverLicence == "No")
+        if (hasDriverLicence.equals("No"))
             this.hasDriverLicence = false;
     }
 
@@ -76,9 +74,9 @@ public class Person
         this.gender = gender;
     }
     public void setGender(String gender) {
-        if(gender == "Woman")
+        if(gender.equals("Woman"))
             this.gender = 1;
-        if(gender == "Man")
+        if(gender.equals("Man"))
             this.gender = 2;
 
     }
@@ -103,9 +101,9 @@ public class Person
         this.maritalStatus = maritalStatus;
     }
     public void setMaritalStatus(String maritalStatus) {
-        if (maritalStatus == "Single")
+        if (maritalStatus.equals("Single"))
             this.maritalStatus = 1;
-        if (maritalStatus == "Married")
+        if (maritalStatus.equals("Married"))
             this.maritalStatus = 2;
     }
 
@@ -120,22 +118,40 @@ public class Person
         this.hasDriverLicence = hasDriverLicence;
     }
     public void setHasDriverLicence(String hasDriverLicence) {
-        if (hasDriverLicence == "Yes")
+        if (hasDriverLicence.equals("Yes"))
             this.hasDriverLicence = true;
-        if (hasDriverLicence == "No")
+        if (hasDriverLicence.equals("No"))
             this.hasDriverLicence = false;
+    }
+    public String getHasDriverLicense()
+    {
+        if (hasDriverLicence)
+            return "Yes";
+        else
+            return "No";
     }
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Person [" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", gender=" + gender +
-                ", birthDate=" + birthDate +
-                ", maritalStatus=" + maritalStatus +
-                ", hasDriverLicence=" + hasDriverLicence +
-                '}';
+                ", birthDate=" + getBirthDate(birthDate) +
+                ", maritalStatus=" + getMaritalStatus() +
+                ", hasDriverLicence=" + getHasDriverLicense() +
+                ']';
+    }
+    public String getBirthDate(Calendar cal)
+    {
+        String result = "";
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        int month = cal.get(Calendar.MONTH) + 1;
+        int year = cal.get(Calendar.YEAR);
+        String dayStr = String.format("%02d", day);
+        String monthStr = String.format("%02d", month);
+
+        return dayStr + "/" + monthStr + "/" + year;
     }
 }

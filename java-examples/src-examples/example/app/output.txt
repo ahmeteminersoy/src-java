@@ -1,0 +1,46 @@
+Hello world***********************************************************
+Department [departmentId=1, departmentName=Accounting]
+Manager [id: 123, MehmetAri # of Employees: 3]
+
+Developer
+Person [id=111, firstName='Ayse', lastName='Caliskan', gender=1, birthDate=05/05/1986, maritalStatus=Married, hasDriverLicence=Yes]
+Employee Info[salary=35000.0, hireDate=10/10/2017]
+RegularEmployee Info [performanceScore=25.0, bonus=0.0]
+[Project [projectName='CreditCard', startDate=07/03/2024, state=false], Project [projectName='Robotic', startDate=07/03/2024, state=true]]
+
+Sales Employee
+Person [id=167, firstName='Serkan', lastName='Yildiz', gender=2, birthDate=25/09/1990, maritalStatus=Married, hasDriverLicence=Yes]
+Employee Info[salary=75000.0, hireDate=14/02/2015]
+RegularEmployee Info [performanceScore=50.0, bonus=0.0]
+[Product [productName='Product5', transactionDate=11/01/2023, price=90000.0], Product [productName='Product1', transactionDate=01/01/2023, price=10000.0]]
+
+Regular Employee
+Person [id=156, firstName='Bulut', lastName='Karadag', gender=2, birthDate=23/07/1979, maritalStatus=Single, hasDriverLicence=Yes]
+Employee Info[salary=45000.0, hireDate=15/11/2018]
+RegularEmployee Info [performanceScore=75.0, bonus=0.0]
+
+***********************************************************
+Department [departmentId=2, departmentName=Marketing]
+Manager [id: 256, ArzuOzturk # of Employees: 2]
+
+Developer
+Person [id=247, firstName='Fatma', lastName='Esin', gender=1, birthDate=18/11/1976, maritalStatus=Single, hasDriverLicence=Yes]
+Employee Info[salary=50000.0, hireDate=04/11/2016]
+RegularEmployee Info [performanceScore=80.0, bonus=0.0]
+[Project [projectName='LLM', startDate=07/03/2024, state=true], Project [projectName='SpeechRecognition', startDate=07/03/2024, state=true], Project [projectName='ATM', startDate=07/03/2024, state=true]]
+
+Sales Employee
+Person [id=213, firstName='Mustafa', lastName='Emir', gender=2, birthDate=05/04/1989, maritalStatus=Married, hasDriverLicence=Yes]
+Employee Info[salary=100000.0, hireDate=24/05/2014]
+RegularEmployee Info [performanceScore=100.0, bonus=0.0]
+[Product [productName='Product1', transactionDate=01/01/2023, price=10000.0], Product [productName='Product2', transactionDate=01/02/2023, price=1500.0], Product [productName='Product3', transactionDate=01/11/2023, price=15000.0]]
+
+
+**********************CUSTOMERS************************
+Customer [id:224products=[Product [productName='Product1', transactionDate=01/01/2023, price=10000.0], Product [productName='Product2', transactionDate=01/02/2023, price=1500.0], Product [productName='Product5', transactionDate=11/01/2023, price=90000.0]]}
+Customer [id:267products=[Product [productName='Product3', transactionDate=01/11/2023, price=15000.0]]}
+Customer [id:178products=[Product [productName='Product2', transactionDate=01/02/2023, price=1500.0], Product [productName='Product3', transactionDate=01/11/2023, price=15000.0]]}
+**********************PEOPLE************************
+Person [id=145, firstName='Ismail', lastName='Celik', gender=2, birthDate=09/06/1988, maritalStatus=Married, hasDriverLicence=Yes]
+Person [id=189, firstName='Taner', lastName='Eser', gender=2, birthDate=09/01/1967, maritalStatus=Single, hasDriverLicence=Yes]
+Person [id=236, firstName='Ela', lastName='Kara', gender=1, birthDate=24/09/1989, maritalStatus=Married, hasDriverLicence=No]

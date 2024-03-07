@@ -12,12 +12,14 @@ public class Manager extends Employee{
     {
         super(id, firstName, lastName, gender, birthDate, maritalStatus, hasDriverLicence, salary, hireDate, department);
         this.bonusBudget = bonusBudget;
+        regularEmployees = new ArrayList<>();
     }
 
     public Manager(Employee employee, double bonusBudget)
     {
         super(employee, employee.getSalary(), employee.getHireDate(), employee.getDepartment());
         this.bonusBudget = bonusBudget;
+        regularEmployees = new ArrayList<>();
     }
     public void addEmployee(RegularEmployee regularEmployee)
     {
@@ -62,9 +64,9 @@ public class Manager extends Employee{
 
     @Override
     public String toString() {
-        return "Manager{" +
-                "regularEmployees=" + regularEmployees +
-                ", bonusBudget=" + bonusBudget +
-                '}';
+        return "Manager [" +
+                "id: " + getId() +
+                ", "+ getFirstName() + getLastName() + " # of Employees: " + regularEmployees.size() +
+                ']';
     }
 }

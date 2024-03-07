@@ -28,7 +28,8 @@ public class Customer extends Person{
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "Customer [id:" + super.getId()
+                +
                 "products=" + products +
                 '}';
     }

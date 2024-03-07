@@ -16,8 +16,8 @@ public class SalesEmployee extends RegularEmployee{
         numberOfSalesEmployees++;
     }
 
-    public SalesEmployee(RegularEmployee regularEmployee, double performanceScore, ArrayList<Product> sales) {
-        super(regularEmployee, performanceScore);
+    public SalesEmployee(RegularEmployee regularEmployee, ArrayList<Product> sales) {
+        super(regularEmployee, regularEmployee.getPerformanceScore());
         this.sales = sales;
         numberOfSalesEmployees++;
     }
@@ -47,12 +47,22 @@ public class SalesEmployee extends RegularEmployee{
     public void setNumberOfSalesEmployees(int numberOfSalesEmployees) {
         this.numberOfSalesEmployees = numberOfSalesEmployees;
     }
+    public String getAllProductName()
+    {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < sales.size(); i++) {
+            result.append(sales.get(i));
+            if (i < sales.size() - 1) {
+                result.append(", ");
+            }
+        }
+        return result.toString();
+    }
 
     @Override
     public String toString() {
-        return "SalesEmployee{" +
-                "sales=" + sales +
-                ", numberOfSalesEmployees=" + numberOfSalesEmployees +
-                '}';
+        return super.toString() + "\n[" +
+                getAllProductName() +
+                ']';
     }
 }

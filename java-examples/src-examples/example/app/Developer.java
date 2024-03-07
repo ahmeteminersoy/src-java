@@ -1,6 +1,7 @@
 package example.app;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 
 public class Developer extends RegularEmployee{
@@ -46,12 +47,23 @@ public class Developer extends RegularEmployee{
     public void setNumberOfDevelopers(int numberOfDevelopers) {
         this.numberOfDevelopers = numberOfDevelopers;
     }
+    public String getAllProjectsName()
+    {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < projects.size(); i++) {
+            result.append(projects.get(i));
+            if (i < projects.size() - 1) {
+                result.append(", ");
+            }
+        }
+        return result.toString();
+    }
+
 
     @Override
     public String toString() {
-        return "Developer{" +
-                "projects=" + projects +
-                ", numberOfDevelopers=" + numberOfDevelopers +
-                '}';
+        return super.toString() +
+                "\n["+ getAllProjectsName() +
+                ']';
     }
 }
