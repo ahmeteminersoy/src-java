@@ -1,4 +1,4 @@
-package example.app;
+package src;
 
 public class Department {
     private int departmentId;

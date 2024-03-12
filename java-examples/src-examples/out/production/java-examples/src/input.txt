@@ -1,7 +1,6 @@
 Department 1 Accounting
 Department 2 Marketing
 
-
 Project AutoCredit 01/05/2023 Open
 Project ATM 01/12/2023 Open
 Project CreditCard 01/05/2022 Close

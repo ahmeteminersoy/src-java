@@ -5,31 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8feb05f-e1bf-41eb-a5e1-583736600500" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/example/app/TestCodeApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Developer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app/RegularEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/RegularEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app/SalesEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/app/SalesEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Developer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/RegularEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegularEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/SalesEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SalesEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/TestCodeApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app/output.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/java-examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Department.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Developer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Developer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/Project.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/RegularEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/RegularEmployee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/SalesEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/example/app/SalesEmployee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Department.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Developer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/Project.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/RegularEmployee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/SalesEmployee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/TestCodeApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/example/app/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,35 +63,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.App.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Test.executor": "Run",
-    "Application.TestApp.executor": "Run",
-    "Application.TestCodeApp.executor": "Run",
-    "Application.example.app.App.executor": "Run",
-    "Application.org.csystem.app.App.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ahmeteminersoy/Documents/src/src-java/java-examples/src-examples",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestCodeApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.example.app.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.org.csystem.app.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.src.Test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ahmeteminersoy/Documents/src/src-java/java-examples/src-examples&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "SQL"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;SQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="java-examples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="example.app.Test" />
       <module name="java-examples" />
       <extension name="coverage">
         <pattern>
@@ -151,11 +171,6 @@
           <properties class="java.lang.ClassCastException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/example/app/TestCodeApp.java</url>
-          <line>211</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

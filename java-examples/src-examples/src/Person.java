@@ -1,4 +1,4 @@
-package example.app;
+package src;
 
 import java.util.Calendar;
 import java.util.Objects;
@@ -137,7 +137,7 @@ public class Person
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", gender=" + gender +
+                ", gender=" + getGender() +
                 ", birthDate=" + getBirthDate(birthDate) +
                 ", maritalStatus=" + getMaritalStatus() +
                 ", hasDriverLicence=" + getHasDriverLicense() +

@@ -1,7 +1,6 @@
-package example.app;
+package src;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
 
 public class Developer extends RegularEmployee{

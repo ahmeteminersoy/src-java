@@ -1,4 +1,4 @@
-package example.app;
+package src;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -66,7 +66,7 @@ public class Manager extends Employee{
     public String toString() {
         return "Manager [" +
                 "id: " + getId() +
-                ", "+ getFirstName() + getLastName() + " # of Employees: " + regularEmployees.size() +
+                ", "+ getFirstName() +" "+ getLastName() + " # of Employees: " + regularEmployees.size() +
                 ']';
     }
 }

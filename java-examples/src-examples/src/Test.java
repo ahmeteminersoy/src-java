@@ -1,12 +1,11 @@
-package example.app;
+package src;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Scanner;
 
-public class TestCodeApp {
+public class Test {
     public static ArrayList<Department> departments = new ArrayList<>();
     public static ArrayList<Employee> employees = new ArrayList<>();
     public static ArrayList<RegularEmployee> regularEmployees = new ArrayList<>();
@@ -19,97 +18,136 @@ public class TestCodeApp {
     public static ArrayList<Manager> managers = new ArrayList<>();
 
     public static void main(String[] args) {
-        String inputTextAddress = "/Users/ahmeteminersoy/Documents/src/src-java/java-examples/src-examples/example/app/input.txt";
-        String outputTextAddress = "/Users/ahmeteminersoy/Documents/src/src-java/java-examples/src-examples/example/app/output.txt";
-        try (FileWriter fileWriter = new FileWriter(outputTextAddress))
-        {
-
-            FileReader fileReader = new FileReader(inputTextAddress);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-
-            fileWriter.write("Hello world");
-            String line;
-
-            ArrayList<String> lines = new ArrayList<>();
-            while ((line = bufferedReader.readLine()) != null) {
-                lines.add(line);
-            }
-            for(String str : lines)
-            {
-                if (str.isEmpty())
-                    continue;
-                String []  tokens = str.split(" ");
-                run(tokens);
-            }
-            for (Manager m : managers)
-                for (RegularEmployee re : regularEmployees)
-                {
-                    if (m.getDepartment() == re.getDepartment())
-                        m.addEmployee(re);
-                }
-
-            for (Department dep : departments)
-            {
-                fileWriter.write("***********************************************************\n");
-                fileWriter.write(dep + "\n");
-                for (Manager m : managers)
-                    if (m.getDepartment() == dep)
-                        fileWriter.write( m + "\n");;
-                fileWriter.write( "\n");
-
-                for (Developer dev : developers)
-                {
-
-                    if (dev.getDepartment() == dep)
-                    {
-                        fileWriter.write( "Developer\n");
-                        fileWriter.write( dev + "\n");
-                    }
-                }
-                fileWriter.write( "\n");
-                for (SalesEmployee se : salesEmployees)
-                {
-                    if (se.getDepartment() == dep)
-                    {
-                        fileWriter.write( "Sales Employee\n");
-                        fileWriter.write( se + "\n");
-                    }
-
-                }
-                fileWriter.write( "\n");
-                for (RegularEmployee re : regularEmployees)
-                {
-                    if (re.getDepartment() == dep && !isDeveloper(re) && !isSalesEmployee(re))
-                    {
-                        fileWriter.write( "Regular Employee\n");
-                        fileWriter.write( re + "\n");
-                    }
-
-                }
-                fileWriter.write( "\n");
-            }
-            fileWriter.write( "**********************CUSTOMERS************************" + "\n");
-
-            for (Customer c : customers)
-                if(c.getProducts().getFirst() != null)
-                    fileWriter.write( c + "\n");
-            fileWriter.write( "**********************PEOPLE************************\n");
-
-            for (Person p : people)
-                if (!isCustomer(p) && !isEmployee(p))
-                    fileWriter.write( p + "\n");
-
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        // Perform operations as described in the assignment
-        // For example, creating employees, customers, etc.
-
-        // Print results to output.txt file
+        run();
     }
-    public static void run(String [] tokens)
+
+    public static void run() {
+        {
+            String inputTextAddress = "/Users/ahmeteminersoy/Documents/src/src-java/java-examples/src-examples/src/input.txt";
+            String outputTextAddress = "/Users/ahmeteminersoy/Documents/src/src-java/java-examples/src-examples/src/output.txt";
+            try (FileWriter fileWriter = new FileWriter(outputTextAddress))
+            {
+
+                FileReader fileReader = new FileReader(inputTextAddress);
+                BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+                String line;
+
+                ArrayList<String> lines = new ArrayList<>();
+                while ((line = bufferedReader.readLine()) != null) {
+                    lines.add(line);
+                }
+                for(String str : lines)
+                {
+                    if (str.isEmpty())
+                        continue;
+                    String []  tokens = str.split(" ");
+                    execute(tokens);
+                }
+                for (Manager m : managers)
+                    for (RegularEmployee re : regularEmployees)
+                    {
+                        if (m.getDepartment() == re.getDepartment())
+                            m.addEmployee(re);
+                    }
+                for (Manager m: managers)
+                {
+                    m.distributeBonusBudget();
+                    m.raiseSalary(0.2);
+                }
+
+
+                for (RegularEmployee re: regularEmployees)
+                    re.raiseSalary(0.3);
+
+                for (Developer de: developers)
+                    de.raiseSalary(0.23);
+                for (SalesEmployee se : salesEmployees)
+                    se.raiseSalary(0.18);
+
+                double max = 0;
+                SalesEmployee maximumSales = salesEmployees.getFirst();
+                for (SalesEmployee se: salesEmployees)
+                {
+                    double value = 0;
+                    for (Product p : se.getSales())
+                        value += p.getPrice();
+                    if (value > max)
+                    {
+                        max = value;
+                        maximumSales = se;
+                    }
+                }
+                maximumSales.raiseSalary(10000);
+
+
+
+
+
+
+                for (Department dep : departments)
+                {
+                    fileWriter.write("***********************************************************\n");
+                    fileWriter.write(dep + "\n");
+                    for (Manager m : managers)
+                        if (m.getDepartment() == dep)
+                            fileWriter.write( m + "\n");;
+                    fileWriter.write( "\n");
+
+                    for (Developer dev : developers)
+                    {
+
+                        if (dev.getDepartment() == dep)
+                        {
+                            fileWriter.write( "Developer\n");
+                            fileWriter.write( dev + "\n");
+                        }
+                    }
+                    fileWriter.write( "\n");
+                    for (SalesEmployee se : salesEmployees)
+                    {
+                        if (se.getDepartment() == dep)
+                        {
+                            fileWriter.write( "Sales Employee\n");
+                            fileWriter.write( se + "\n");
+                        }
+
+                    }
+                    fileWriter.write( "\n");
+                    for (RegularEmployee re : regularEmployees)
+                    {
+                        if (re.getDepartment() == dep && !isDeveloper(re) && !isSalesEmployee(re))
+                        {
+                            fileWriter.write( "Regular Employee\n");
+                            fileWriter.write( re + "\n");
+                        }
+
+                    }
+                    fileWriter.write( "\n");
+                }
+                fileWriter.write( "**********************CUSTOMERS************************" + "\n");
+
+                for (Customer c : customers)
+                    if(c.getProducts().getFirst() != null)
+                        fileWriter.write( c + "\n");
+                fileWriter.write( "**********************PEOPLE************************\n");
+
+                for (Person p : people)
+                    if (!isCustomer(p) && !isEmployee(p))
+                        fileWriter.write( p + "\n");
+
+            }
+            catch (RuntimeException | IOException e) {
+                System.out.println(e.getMessage());
+            }
+
+            // Perform operations as described in the assignment
+            // For example, creating employees, customers, etc.
+
+            // Print results to output.txt file
+        }
+    }
+    public static void execute(String [] tokens)
     {
         switch (tokens[0]) {
             case "Department":
@@ -194,11 +232,7 @@ public class TestCodeApp {
                 Customer customer = new Customer(findPerson(customerId), customerProducts);
                 customers.add(customer);
                 break;
-
-
-            // Add cases for other classes
             default:
-                // Handle invalid input
                 break;
         }
 
@@ -294,6 +328,4 @@ public class TestCodeApp {
                 return true;
         return false;
     }
-
-
 }
