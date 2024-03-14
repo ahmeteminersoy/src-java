@@ -5,48 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8feb05f-e1bf-41eb-a5e1-583736600500" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/\output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-examples.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/java-examples/\output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/java-examples.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/java-examples/output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/Department.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/Developer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/Manager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/Project.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/RegularEmployee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/SalesEmployee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/output.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Department.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Developer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RegularEmployee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SalesEmployee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/output.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +63,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
