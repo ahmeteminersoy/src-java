@@ -26,8 +26,8 @@ public class RegularEmployee extends Employee{
         this.performanceScore = performanceScore;
     }
 
-    public double getBonus() {
-        return bonus;
+    public String getBonus() {
+        return String.format("%.2f",bonus);
     }
 
     public void setBonus(double bonus) {
@@ -38,7 +38,7 @@ public class RegularEmployee extends Employee{
     public String toString() {
         return super.toString() +"\nRegularEmployee Info [" +
                 "performanceScore=" + performanceScore +
-                ", bonus=" + bonus +
+                ", bonus=" + getBonus() +
                 ']';
     }
 }

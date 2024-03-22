@@ -23,8 +23,8 @@ public class Test {
 
     public static void run() {
         {
-            String inputTextAddress = "/Users/ahmeteminersoy/Documents/src/src-java/java-examples/src-examples/src/input.txt";
-            String outputTextAddress = "/Users/ahmeteminersoy/Documents/src/src-java/java-examples/src-examples/src/output.txt";
+            String inputTextAddress = "/Users/ahmeteminersoy/Documents/src/src-java/java-examples/src-java-homework/src/input.txt";
+            String outputTextAddress = "/Users/ahmeteminersoy/Documents/src/src-java/java-examples/src-java-homework/src/output.txt";
             try (FileWriter fileWriter = new FileWriter(outputTextAddress))
             {
 

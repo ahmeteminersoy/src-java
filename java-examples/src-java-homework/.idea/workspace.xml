@@ -5,16 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8feb05f-e1bf-41eb-a5e1-583736600500" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../src-examples/examplejavaproject/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src-examples/examplejavaproject/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src-examples/examplejavaproject/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src-examples/examplejavaproject/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src-examples/examplejavaproject/examplejavaproject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src-examples/example/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src-examples/example/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src-examples/example/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src-examples/example/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src-examples/example/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src-examples/example/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src-examples/example/example.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src-examples/example/src/quiz1_150123526.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src-examples/example/src/quiz1_150123526/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src-examples/example/src/quiz1_150123526/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src-examples/example/src/quiz1_150123526/Teacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src-examples/example/src/quiz1_150123526/quiz1_150123526.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/\output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/\output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/src/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/src/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/RegularEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/src/RegularEmployee.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/java-examples/src/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-examples/src/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RegularEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegularEmployee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javafx-examples/demo/src/main/java/org/example/demo/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../javafx-examples/demo/src/main/java/org/example/demo/HelloApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,33 +58,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TestApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TestCodeApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.example.app.App.executor&quot;: &quot;Run&quot;,
-    &quot;Application.org.csystem.app.App.executor&quot;: &quot;Run&quot;,
-    &quot;Application.src.Test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ahmeteminersoy/Documents/src/src-java/java-examples/src-examples&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.App.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Test.executor": "Run",
+    "Application.TestApp.executor": "Run",
+    "Application.TestCodeApp.executor": "Run",
+    "Application.example.app.App.executor": "Run",
+    "Application.org.csystem.app.App.executor": "Run",
+    "Application.src.Test.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/ahmeteminersoy/Documents/src/src-java/java-examples/src-java-homework",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;SQL&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "SQL"
     ]
   }
-}</component>
-  <component name="RunManager" selected="Application.App">
+}]]></component>
+  <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />

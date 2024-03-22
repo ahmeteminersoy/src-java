@@ -3,6 +3,9 @@ package src;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import static src.Test.developers;
+import static src.Test.salesEmployees;
+
 public class Manager extends Employee{
     private ArrayList<RegularEmployee> regularEmployees;
     private double bonusBudget;
@@ -31,7 +34,11 @@ public class Manager extends Employee{
     }
     public void distributeBonusBudget()
     {
-        for(RegularEmployee re : regularEmployees)
+        ArrayList<RegularEmployee> list = regularEmployees;
+        list.addAll(developers);
+        list.addAll(salesEmployees);
+
+        for(RegularEmployee re : list)
         {
             re.setBonus(getTotalBonusScorePerUnit() * re.getSalary() * re.getPerformanceScore());
         }

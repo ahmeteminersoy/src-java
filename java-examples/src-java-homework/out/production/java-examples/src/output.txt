@@ -1,38 +1,38 @@
 ***********************************************************
 Department [departmentId=1, departmentName=Accounting]
-Manager [id: 123, Mehmet Ari # of Employees: 3]
+Manager [id: 123, Mehmet Ari # of Employees: 7]
 
 Developer
 Person [id=111, firstName='Ayse', lastName='Caliskan', gender=Woman, birthDate=05/05/1986, maritalStatus=Married, hasDriverLicence=Yes]
 Employee Info[salary=43050.0, hireDate=10/10/2017]
-RegularEmployee Info [performanceScore=25.0, bonus=0.0]
-[Project [projectName='CreditCard', startDate=12/03/2024, state=false], Project [projectName='Robotic', startDate=12/03/2024, state=true]]
+RegularEmployee Info [performanceScore=25.0, bonus=5363.984674329502]
+[Project [projectName='CreditCard', startDate=22/03/2024, state=false], Project [projectName='Robotic', startDate=22/03/2024, state=true]]
 
 Sales Employee
 Person [id=167, firstName='Serkan', lastName='Yildiz', gender=Man, birthDate=25/09/1990, maritalStatus=Married, hasDriverLicence=Yes]
 Employee Info[salary=98500.0, hireDate=14/02/2015]
-RegularEmployee Info [performanceScore=50.0, bonus=0.0]
+RegularEmployee Info [performanceScore=50.0, bonus=22988.505747126437]
 [Product [productName='Product5', transactionDate=11/01/2023, price=90000.0], Product [productName='Product1', transactionDate=01/01/2023, price=10000.0]]
 
 Regular Employee
 Person [id=156, firstName='Bulut', lastName='Karadag', gender=Man, birthDate=23/07/1979, maritalStatus=Single, hasDriverLicence=Yes]
 Employee Info[salary=58500.0, hireDate=15/11/2018]
-RegularEmployee Info [performanceScore=75.0, bonus=63281.25]
+RegularEmployee Info [performanceScore=75.0, bonus=19014.084507042255]
 
 ***********************************************************
 Department [departmentId=2, departmentName=Marketing]
-Manager [id: 256, Arzu Ozturk # of Employees: 2]
+Manager [id: 256, Arzu Ozturk # of Employees: 6]
 
 Developer
 Person [id=247, firstName='Fatma', lastName='Esin', gender=Woman, birthDate=18/11/1976, maritalStatus=Single, hasDriverLicence=Yes]
 Employee Info[salary=61500.0, hireDate=04/11/2016]
-RegularEmployee Info [performanceScore=80.0, bonus=0.0]
-[Project [projectName='LLM', startDate=12/03/2024, state=true], Project [projectName='SpeechRecognition', startDate=12/03/2024, state=true], Project [projectName='ATM', startDate=12/03/2024, state=true]]
+RegularEmployee Info [performanceScore=80.0, bonus=24521.072796934866]
+[Project [projectName='LLM', startDate=22/03/2024, state=true], Project [projectName='SpeechRecognition', startDate=22/03/2024, state=true], Project [projectName='ATM', startDate=22/03/2024, state=true]]
 
 Sales Employee
 Person [id=213, firstName='Mustafa', lastName='Emir', gender=Man, birthDate=05/04/1989, maritalStatus=Married, hasDriverLicence=Yes]
 Employee Info[salary=118000.0, hireDate=24/05/2014]
-RegularEmployee Info [performanceScore=100.0, bonus=0.0]
+RegularEmployee Info [performanceScore=100.0, bonus=61302.68199233717]
 [Product [productName='Product1', transactionDate=01/01/2023, price=10000.0], Product [productName='Product2', transactionDate=01/02/2023, price=1500.0], Product [productName='Product3', transactionDate=01/11/2023, price=15000.0]]
 
 
