@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5daa3b23-fef9-4dd3-809e-857d33f2cd42" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-examples/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-examples/examplejavaproject/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-examples/examplejavaproject/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-examples/examplejavaproject/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-examples/examplejavaproject/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-examples/examplejavaproject/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-examples/examplejavaproject/examplejavaproject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-examples/examplejavaproject/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-examples/src/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-examples/src/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/java-examples.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/java-examples.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/src/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/src/Department.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/src/Developer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/src/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/src/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/src/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/src/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/src/Project.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/src/RegularEmployee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/src/SalesEmployee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/src/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/src/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/out/production/java-examples/src/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/src/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/src/Department.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/src/Developer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/src/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/src/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/src/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/src/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/src/Project.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/src/RegularEmployee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/src/SalesEmployee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/src/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-java-homework/src/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-mvn-examples/mvnproject/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-mvn-examples/mvnproject/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-mvn-examples/mvnproject/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-mvn-examples/mvnproject/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-mvn-examples/mvnproject/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-mvn-examples/mvnproject/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-mvn-examples/mvnproject/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-mvn-examples/mvnproject/src/main/java/example/app/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-mvn-examples/mvnproject/src/main/java/example/app/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-mvn-examples/mvnproject/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-mvn-examples/mvnproject/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-mvn-examples/mvnproject/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java-examples/src-mvn-examples/mvnproject/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/javafx-examples.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/org/example/demo/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/org/example/demo/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/src/main/resources/org/example/demo/hello-view.fxml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2eGdXupYUvKnqAwy5EXLWKoOhCb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Exercise15_24_practice.executor": "Run",
+    "Application.LoanCalculator.executor": "Run",
+    "Application.TicTacToe.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/metamfetemin/util/loancalculator" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="loan-calculator-project" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="loan-calculator-project" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-9b16c6e2" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5daa3b23-fef9-4dd3-809e-857d33f2cd42" name="Changes" comment="" />
+      <created>1711534891213</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711534891213</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
