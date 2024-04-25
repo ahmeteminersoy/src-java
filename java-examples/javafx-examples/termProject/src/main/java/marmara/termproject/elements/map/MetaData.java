@@ -24,7 +24,7 @@ public class MetaData {
         this.winGame = winGame;
         this.allowedCars = allowedCars;
     }
-    public Scene make(){
+    public Pane make(){
         double cellWidth = width / cellsInXDirection;
         double cellHeight = height / cellsInYDirection;
         Pane gridPane= new Pane();
@@ -37,6 +37,6 @@ public class MetaData {
                 cell.setFill(Color.ORANGE);
                 gridPane.getChildren().add(cell);
             }
-        return new Scene(gridPane, width, height);
+        return gridPane;
     }
 }

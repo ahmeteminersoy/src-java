@@ -2,6 +2,7 @@ package marmara.termproject;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import marmara.termproject.elements.map.MetaData;
 
@@ -11,6 +12,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class runTraffic extends Application {
+    private static Pane primaryPane;
+    private static double width;
+    private static double height;
+
     @Override
     public void start(Stage primaryStage) throws IOException {
         String inputTextAddress = "/Users/ahmeteminersoy/Desktop/level1.txt";
@@ -23,7 +28,8 @@ public class runTraffic extends Application {
             while ((line = bufferedReader.readLine()) != null) {
                 lines.add(line);
             }
-            for (String str : lines) {
+            for (String str : lines)
+            {
                 if (str.isEmpty())
                     continue;
                 String[] tokens = str.split(" ");
@@ -34,19 +40,19 @@ public class runTraffic extends Application {
         {
             System.out.println(e.getMessage());
         }
+        Scene scene = new Scene(primaryPane, width, height);
+        primaryStage.setScene(scene);
+        primaryStage.show();
 
 
     }
 
-    public static void main(String[] args) {
-        launch();
-    }
+
     public static void execute(String [] tokens, Stage primaryStage)
     {
         switch (tokens[0])
         {
             case "Metadata" -> {
-                double width, height;
                 int xDirectionCells, yDirectionCells, paths, winGame, allowedCars;
 
                 width = Double.parseDouble(tokens[1]);
@@ -58,11 +64,7 @@ public class runTraffic extends Application {
                 allowedCars = Integer.parseInt(tokens[7]);
 
                 MetaData metaData = new MetaData(width, height, xDirectionCells, yDirectionCells, paths, winGame, allowedCars);
-                Scene scene = metaData.make();
-                primaryStage.setTitle("Map");
-                primaryStage.setScene(scene);
-                primaryStage.show();
-
+                primaryPane = metaData.make();
             }
             case "Building" -> {
 
@@ -81,5 +83,9 @@ public class runTraffic extends Application {
             }
 
         }
+
+    }
+    public static void main(String[] args) {
+        launch();
     }
 }

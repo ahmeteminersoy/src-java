@@ -1,5 +1,6 @@
 package marmara.termproject.elements.items;
 
+import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import marmara.termproject.elements.items.abstracts.item;
 
@@ -16,5 +17,11 @@ public class Building extends item {
         this.rotation = rotation / 90;
         this.x = x;
         this.y = y;
+    }
+    public Node make()
+    {
+        Node building = null;
+
+        return building;
     }
 }
