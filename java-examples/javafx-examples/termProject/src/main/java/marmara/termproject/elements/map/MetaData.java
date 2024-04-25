@@ -9,6 +9,39 @@ public class MetaData {
     private double width;
     private double height;
     private int cellsInXDirection;
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public int getCellsInXDirection() {
+        return cellsInXDirection;
+    }
+
+    public void setCellsInXDirection(int cellsInXDirection) {
+        this.cellsInXDirection = cellsInXDirection;
+    }
+
+    public int getCellsInYDirection() {
+        return cellsInYDirection;
+    }
+
+    public void setCellsInYDirection(int cellsInYDirection) {
+        this.cellsInYDirection = cellsInYDirection;
+    }
+
     private int cellsInYDirection;
     private int paths;
     private int winGame;
@@ -34,7 +67,7 @@ public class MetaData {
             {
                 Rectangle cell = new Rectangle(i * cellWidth, j * cellHeight, cellWidth, cellHeight);
                 cell.setStroke(Color.BLACK);
-                cell.setFill(Color.ORANGE);
+                cell.setFill(Color.LIGHTCYAN);
                 gridPane.getChildren().add(cell);
             }
         return gridPane;
