@@ -66,8 +66,9 @@ public class MetaData {
             for (int j = 0; j < cellsInYDirection; j++)
             {
                 Rectangle cell = new Rectangle(i * cellWidth, j * cellHeight, cellWidth, cellHeight);
-                cell.setStroke(Color.BLACK);
+                cell.setStroke(Color.CYAN);
                 cell.setFill(Color.LIGHTCYAN);
+                cell.setStrokeWidth(0.2);
                 gridPane.getChildren().add(cell);
             }
         return gridPane;

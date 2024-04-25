@@ -3,6 +3,7 @@ package marmara.termproject.elements.items;
 import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.transform.Rotate;
 import marmara.termproject.elements.items.abstracts.item;
 
 public class Building extends item {
@@ -51,44 +52,99 @@ public class Building extends item {
     {
         if (type == 0)
         {
-            if (rotation == 0 | rotation == 2)
-            {
-                Rectangle rectangle = new Rectangle(x  * width / xCellNumber, y * height / yCellNumber,
-                        2 *(width / xCellNumber),3 *(height / yCellNumber));
-                return  rectangle;
+            Rectangle rectangle = new Rectangle(x * width / xCellNumber, y * height / yCellNumber,
+                    2 * (width / xCellNumber), 3 * (height / yCellNumber));
 
-            }
-            else
-            {
-                Rectangle rectangle = new Rectangle(x * width / xCellNumber, y * height / yCellNumber,
-                        2 *(width / xCellNumber),3 *(height / yCellNumber));
-                return  rectangle;
-            }
+            switch (rotation)
+                    {
+                        case 0-> {
+                            return rectangle;
+
+                        }
+                        case 1-> {
+                            rectangle.setRotate(90);
+                            System.out.println(rectangle);
+                            rectangle.setX(x * width / xCellNumber);
+                            rectangle.setY(y * height / yCellNumber);
+                            System.out.println(rectangle);
+                            return rectangle;
+
+                        }
+                        case 2-> {
+                            rectangle.setRotate(180);
+                            return rectangle;
+
+                        }
+                        case 3-> {
+                            rectangle.setRotate(270);
+                            rectangle.setX(x * width / xCellNumber);
+                            rectangle.setY( y * height / yCellNumber);
+                            return rectangle;
+
+                        }
+                    }
+
+
         }
         if (type == 1)
         {
-            if (rotation == 0 | rotation == 2)
-            {
-                Rectangle rectangle = new Rectangle(x * width / xCellNumber, y * height / yCellNumber,
-                        2 *(width / xCellNumber),3 *(height / yCellNumber));
-                return  rectangle;
 
-            }
-            else
-            {
                 Rectangle rectangle = new Rectangle(x * width / xCellNumber, y * height / yCellNumber,
                         2 *(width / xCellNumber),3 *(height / yCellNumber));
-                return  rectangle;
+            switch (rotation)
+            {
+                case 0-> {
+                    return rectangle;
+
+                }
+                case 1-> {
+                    rectangle.setRotate(90);
+                    return rectangle;
+
+                }
+                case 2-> {
+                    rectangle.setRotate(180);
+                    return rectangle;
+
+                }
+                case 3-> {
+                    rectangle.setRotate(270);
+                    return rectangle;
+
+                }
             }
+
         }
         if (type == 2)
         {
-            Rectangle rectangle = new Rectangle((x - 1) * width / xCellNumber, (y - 1) * height / yCellNumber,
+            Rectangle rectangle = new Rectangle(x * width / xCellNumber, y * height / yCellNumber,
                     width / xCellNumber, height / yCellNumber);
 
-            return rectangle;
+            switch (rotation)
+            {
+                case 0-> {
+                    return rectangle;
+
+                }
+                case 1-> {
+                    rectangle.setRotate(90);
+                    return rectangle;
+
+                }
+                case 2-> {
+                    rectangle.setRotate(180);
+                    return rectangle;
+
+                }
+                case 3-> {
+                    rectangle.setRotate(270);
+                    return rectangle;
+
+                }
+            }
         }
         return null;
     }
+    
 
 }

@@ -5,7 +5,9 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import marmara.termproject.elements.items.Building;
+import marmara.termproject.elements.items.RoadTile;
 import marmara.termproject.elements.map.MetaData;
+import marmara.termproject.elements.map.TrafficLight;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -13,14 +15,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class runTraffic extends Application {
-    private static MetaData metaData;
+    public static MetaData metaData;
     private static Pane primaryPane;
     private static double width;
     private static double height;
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        String inputTextAddress = "/Users/ahmeteminersoy/Desktop/level1.txt";
+        String inputTextAddress = "/Users/ahmeteminersoy/Desktop/level3.txt";
         try {
             FileReader fileReader = new FileReader(inputTextAddress);
 
@@ -84,9 +86,28 @@ public class runTraffic extends Application {
 
             }
             case "RoadTile" -> {
+                int type = Integer.parseInt(tokens[1]);
+                int rotation = Integer.parseInt(tokens[2]);
+                int x = Integer.parseInt(tokens[3]);
+                int y = Integer.parseInt(tokens[4]);
+                RoadTile roadTile = new RoadTile(type, rotation, x, y);
+                roadTile.height = height;
+                roadTile.width = width;
+                roadTile.xCellNumber = metaData.getCellsInXDirection();
+                roadTile.yCellNumber = metaData.getCellsInYDirection();
 
+
+                primaryPane.getChildren().add(roadTile.make());
             }
             case "TrafficLight" -> {
+                double x1 = Double.parseDouble(tokens[1]);
+                double y1 = Double.parseDouble(tokens[2]);
+                double x2 = Double.parseDouble(tokens[3]);
+                double y2 = Double.parseDouble(tokens[4]);
+                TrafficLight trafficLight = new TrafficLight(x1, y1, x2, y2);
+                primaryPane.getChildren().add(trafficLight.makeLine());
+                primaryPane.getChildren().add(trafficLight.makeLight());
+
 
             }
             case "Path" -> {

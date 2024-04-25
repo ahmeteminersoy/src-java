@@ -1,5 +1,12 @@
 package marmara.termproject.elements.map;
 
+import javafx.scene.Node;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
+
+import static marmara.termproject.runTraffic.metaData;
+
 public class TrafficLight {
     private double x1;
     private double y1;
@@ -11,5 +18,17 @@ public class TrafficLight {
         this.y1 = y1;
         this.x2 = x2;
         this.y2 = y2;
+    }
+    public Node makeLine()
+    {
+        return new Line(x1, y1, x2, y2);
+    }
+    public Node makeLight()
+    {
+        double r = metaData.getWidth() / metaData.getCellsInXDirection() / 10;
+        Circle circle = new Circle((x1 + x2) / 2, (y1 + y2) / 2, r);
+        circle.setFill(Color.GREEN);
+
+        return circle;
     }
 }
