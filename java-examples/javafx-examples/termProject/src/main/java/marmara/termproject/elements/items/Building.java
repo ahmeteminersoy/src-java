@@ -28,7 +28,7 @@ public class Building extends item {
             this.color = Color.LIGHTBLUE;
         }
         else if (color == 2) {
-            this.color = Color.DARKRED;
+            this.color = Color.LIGHTGREEN;
         }
         else if (color == 3) {
             this.color = Color.RED;
@@ -55,64 +55,34 @@ public class Building extends item {
             Rectangle rectangle = new Rectangle(x * width / xCellNumber, y * height / yCellNumber,
                     2 * (width / xCellNumber), 3 * (height / yCellNumber));
 
-            switch (rotation)
-                    {
-                        case 0-> {
-                            return rectangle;
+            if (rotation == 0 | rotation == 2) {
+                return new Rectangle(x * width / xCellNumber, y * height / yCellNumber,
+                        2 * (width / xCellNumber), 3 * (height / yCellNumber));
+            }
 
-                        }
-                        case 1-> {
-                            rectangle.setRotate(90);
-                            System.out.println(rectangle);
-                            rectangle.setX(x * width / xCellNumber);
-                            rectangle.setY(y * height / yCellNumber);
-                            System.out.println(rectangle);
-                            return rectangle;
 
-                        }
-                        case 2-> {
-                            rectangle.setRotate(180);
-                            return rectangle;
-
-                        }
-                        case 3-> {
-                            rectangle.setRotate(270);
-                            rectangle.setX(x * width / xCellNumber);
-                            rectangle.setY( y * height / yCellNumber);
-                            return rectangle;
-
-                        }
-                    }
+            else {
+                return new Rectangle(x * width / xCellNumber, y * height / yCellNumber,
+                        3 *(width / xCellNumber),2 *(height / yCellNumber));
+            }
 
 
         }
         if (type == 1)
         {
 
-                Rectangle rectangle = new Rectangle(x * width / xCellNumber, y * height / yCellNumber,
-                        2 *(width / xCellNumber),3 *(height / yCellNumber));
-            switch (rotation)
-            {
-                case 0-> {
-                    return rectangle;
+
+
+                if (rotation == 0 | rotation == 2) {
+                    return new Rectangle(x * width / xCellNumber, y * height / yCellNumber,
+                            2 *(width / xCellNumber),3 *(height / yCellNumber));
 
                 }
-                case 1-> {
-                    rectangle.setRotate(90);
-                    return rectangle;
-
+                else {
+                    return new Rectangle(x * width / xCellNumber, y * height / yCellNumber,
+                            3 * (width / xCellNumber), 2 * (height / yCellNumber));
                 }
-                case 2-> {
-                    rectangle.setRotate(180);
-                    return rectangle;
 
-                }
-                case 3-> {
-                    rectangle.setRotate(270);
-                    return rectangle;
-
-                }
-            }
 
         }
         if (type == 2)
@@ -145,6 +115,7 @@ public class Building extends item {
         }
         return null;
     }
-    
-
 }
+
+
+

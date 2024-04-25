@@ -22,7 +22,7 @@ public class runTraffic extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        String inputTextAddress = "/Users/ahmeteminersoy/Desktop/level3.txt";
+        String inputTextAddress = "/Users/ahmeteminersoy/Desktop/level5.txt";
         try {
             FileReader fileReader = new FileReader(inputTextAddress);
 
