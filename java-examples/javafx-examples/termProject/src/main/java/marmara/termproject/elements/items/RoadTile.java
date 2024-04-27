@@ -3,8 +3,9 @@ package marmara.termproject.elements.items;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
+import marmara.termproject.elements.items.abstracts.item;
 
-public class RoadTile {
+public class RoadTile extends item {
     public double width;
     public double height;
     public int xCellNumber;

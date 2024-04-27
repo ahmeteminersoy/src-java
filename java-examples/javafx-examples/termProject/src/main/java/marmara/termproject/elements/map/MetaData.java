@@ -47,6 +47,18 @@ public class MetaData {
     private int winGame;
     private int allowedCars;
 
+    public int getPaths() {
+        return paths;
+    }
+
+    public int getWinGame() {
+        return winGame;
+    }
+
+    public int getAllowedCars() {
+        return allowedCars;
+    }
+
     public MetaData(double width, double height, int cellsInXDirection, int cellsInYDirection, int paths, int winGame,
                     int allowedCars) {
         this.width = width;

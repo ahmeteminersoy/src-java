@@ -4,10 +4,11 @@ import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import marmara.termproject.elements.items.abstracts.item;
 
 import static marmara.termproject.runTraffic.metaData;
 
-public class TrafficLight {
+public class TrafficLight extends item {
     private boolean isGreen;
     private double x1;
     private double y1;

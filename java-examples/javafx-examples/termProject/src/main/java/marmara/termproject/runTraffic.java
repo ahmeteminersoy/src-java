@@ -1,18 +1,24 @@
 package marmara.termproject;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import marmara.termproject.elements.items.Building;
+import marmara.termproject.elements.items.Car;
 import marmara.termproject.elements.items.RoadTile;
 import marmara.termproject.elements.map.MetaData;
+import marmara.termproject.elements.map.Path;
 import marmara.termproject.elements.map.TrafficLight;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class runTraffic extends Application {
     public static MetaData metaData;
@@ -22,7 +28,53 @@ public class runTraffic extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        String inputTextAddress = "/Users/ahmeteminersoy/Desktop/level5.txt";
+        String inputTextAddress = "/Users/ahmeteminersoy/Desktop/level1.txt";
+        readFiles(inputTextAddress, primaryStage);
+
+
+        initialize(primaryStage, primaryPane, width, height);
+        Car[] cars = makeCars();
+        runCars(cars);
+    }
+    private void initialize(Stage primaryStage, Pane primaryPane, double width, double height)
+    {
+        Scene scene = new Scene(primaryPane, width, height);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+    private Car[] makeCars()
+    {
+        int n = Path.getPaths().size();
+        Random r = new Random();
+
+        Car [] cars = new Car[metaData.getAllowedCars()];
+        for (int i = 0; i < cars.length; i ++)
+        {
+            cars[i] = new Car(Path.getPath(r.nextInt(n)));
+        }
+
+        return cars;
+    }
+    private void runCars(Car[] cars)
+
+    {
+        Timeline timeline = new Timeline();
+        int[] count = {0};
+        for(Car car: cars) {
+            KeyFrame keyFrame = new KeyFrame(Duration.seconds(0.9 * (count[0] + 1)), event -> {
+
+                getPrimaryPane().getChildren().add(car.makeCar());
+                car.createTraffic();
+
+            });
+            timeline.getKeyFrames().add(keyFrame);
+            count[0]++;
+        }
+
+        timeline.play();
+    }
+    private void readFiles(String inputTextAddress, Stage primaryStage)
+    {
         try {
             FileReader fileReader = new FileReader(inputTextAddress);
 
@@ -37,22 +89,18 @@ public class runTraffic extends Application {
                 if (str.isEmpty())
                     continue;
                 String[] tokens = str.split(" ");
-                execute(tokens, primaryStage);
+                execute(tokens);
             }
+
+
         }
         catch (RuntimeException | IOException e)
         {
             System.out.println(e.getMessage());
         }
-        Scene scene = new Scene(primaryPane, width, height);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
-
     }
 
-
-    public static void execute(String [] tokens, Stage primaryStage)
+    public static void execute(String [] tokens)
     {
         switch (tokens[0])
         {
@@ -108,10 +156,14 @@ public class runTraffic extends Application {
                 primaryPane.getChildren().add(trafficLight.makeLine());
                 primaryPane.getChildren().add(trafficLight.makeLight());
 
-
             }
-            case "Path" -> {
 
+            case "Path" -> {
+                int pathNumber = Integer.parseInt(tokens[1]);
+                String pathElement = tokens[2];
+                double x = Double.parseDouble(tokens[3]);
+                double y = Double.parseDouble(tokens[4]);
+                Path.addInstance(pathNumber, pathElement, x, y);
             }
             default -> {
                 break;
@@ -122,5 +174,8 @@ public class runTraffic extends Application {
     }
     public static void main(String[] args) {
         launch();
+    }
+    public static Pane getPrimaryPane() {
+        return primaryPane;
     }
 }

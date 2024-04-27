@@ -52,8 +52,6 @@ public class Building extends item {
     {
         if (type == 0)
         {
-            Rectangle rectangle = new Rectangle(x * width / xCellNumber, y * height / yCellNumber,
-                    2 * (width / xCellNumber), 3 * (height / yCellNumber));
 
             if (rotation == 0 | rotation == 2) {
                 return new Rectangle(x * width / xCellNumber, y * height / yCellNumber,
