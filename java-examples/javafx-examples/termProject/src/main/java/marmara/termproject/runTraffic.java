@@ -11,7 +11,7 @@ import marmara.termproject.elements.items.Building;
 import marmara.termproject.elements.items.Car;
 import marmara.termproject.elements.items.RoadTile;
 import marmara.termproject.elements.map.MetaData;
-import marmara.termproject.elements.map.Path;
+import marmara.termproject.elements.map.MyPath;
 import marmara.termproject.elements.map.TrafficLight;
 
 import java.io.BufferedReader;
@@ -25,6 +25,7 @@ public class runTraffic extends Application {
     private static Pane primaryPane;
     private static double width;
     private static double height;
+    public static ArrayList<TrafficLight> trafficLights = new ArrayList<>();
 
     @Override
     public void start(Stage primaryStage) throws IOException {
@@ -44,13 +45,13 @@ public class runTraffic extends Application {
     }
     private Car[] makeCars()
     {
-        int n = Path.getPaths().size();
+        int n = MyPath.getPaths().size();
         Random r = new Random();
 
         Car [] cars = new Car[metaData.getAllowedCars()];
         for (int i = 0; i < cars.length; i ++)
         {
-            cars[i] = new Car(Path.getPath(r.nextInt(n)));
+            cars[i] = new Car(MyPath.getPath(r.nextInt(n)));
         }
 
         return cars;
@@ -153,6 +154,7 @@ public class runTraffic extends Application {
                 double x2 = Double.parseDouble(tokens[3]);
                 double y2 = Double.parseDouble(tokens[4]);
                 TrafficLight trafficLight = new TrafficLight(x1, y1, x2, y2);
+                trafficLights.add(trafficLight);
                 primaryPane.getChildren().add(trafficLight.makeLine());
                 primaryPane.getChildren().add(trafficLight.makeLight());
 
@@ -163,7 +165,7 @@ public class runTraffic extends Application {
                 String pathElement = tokens[2];
                 double x = Double.parseDouble(tokens[3]);
                 double y = Double.parseDouble(tokens[4]);
-                Path.addInstance(pathNumber, pathElement, x, y);
+                MyPath.addInstance(pathNumber, pathElement, x, y);
             }
             default -> {
                 break;
