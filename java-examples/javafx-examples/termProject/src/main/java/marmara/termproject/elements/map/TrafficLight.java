@@ -14,6 +14,8 @@ public class TrafficLight extends item {
     private double y1;
     private double x2;
     private double y2;
+    private Circle circle;
+    private Line line;
 
     public TrafficLight(double x1, double y1, double x2, double y2) {
         isGreen = true;
@@ -24,8 +26,18 @@ public class TrafficLight extends item {
     }
     public Node makeLine()
     {
+        this.line = new Line(x1, y1, x2, y2);
         return new Line(x1, y1, x2, y2);
     }
+
+    public Circle getCircle() {
+        return circle;
+    }
+
+    public Line getLine() {
+        return line;
+    }
+
     public Node makeLight()
     {
         double r = metaData.getWidth() / metaData.getCellsInXDirection() / 10;
@@ -40,7 +52,7 @@ public class TrafficLight extends item {
                 isGreen = true;
             }
         });
-
+        this.circle = circle;
         return circle;
     }
 

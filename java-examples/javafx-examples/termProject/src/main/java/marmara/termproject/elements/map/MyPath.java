@@ -1,62 +1,73 @@
 package marmara.termproject.elements.map;
 
 import javafx.scene.shape.LineTo;
+import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
 
 import java.util.ArrayList;
 
 public class MyPath extends Path {
-    private static ArrayList<MyPath> myPaths = new ArrayList<>();
+    private static final ArrayList<MyPath> myPaths = new ArrayList<>();
     private int pathNumber;
-    private String pathElement;
-    private ArrayList<Double> xCors;
-    private ArrayList<Double> yCors;
+    private Path path;
 
-    @Override
-    public String toString() {
-        return "Path{" +
-                "pathNumber=" + pathNumber +
-                ", pathElement='" + pathElement + '\'' +
-                ", xCors=" + xCors +
-                ", yCors=" + yCors +
-                '}';
-    }
 
-    private MyPath(int pathNumber, String pathElement, ArrayList<Double> xCors, ArrayList<Double> yCors) {
+    private MyPath(int pathNumber, Path path) {
         this.pathNumber = pathNumber;
-        this.pathElement = pathElement;
-        this.xCors = xCors;
-        this.yCors = yCors;
+        this.path = path;
     }
     public static void addInstance(int pathNumber, String pathElement, double x, double y)
     {
         for (MyPath myPath : myPaths)
             if (myPath.pathNumber == pathNumber)
             {
-                myPath.xCors.add(x);
-                myPath.yCors.add(y);
+
+                if (pathElement.equals("MoveTo"))
+                {
+                    MoveTo moveTo = new MoveTo(x, y);
+                    myPath.path.getElements().add(moveTo);
+                } else if (pathElement.equals("LineTo")) {
+                    LineTo lineTo = new LineTo(x, y);
+                    myPath.path.getElements().add(lineTo);
+                }
+
                 return;
             }
-        MyPath myPath = new MyPath(pathNumber, pathElement, new ArrayList<Double>(), new ArrayList<Double>());
-        myPath.xCors.add(x);
-        myPath.yCors.add(y);
-        myPaths.add(myPath);
+        Path path = new Path();
+        if (pathElement.equals("MoveTo"))
+        {
+            MoveTo moveTo = new MoveTo(x, y);
+            path.getElements().add(moveTo);
+        } else if (pathElement.equals("LineTo")) {
+            LineTo lineTo = new LineTo(x, y);
+            path.getElements().add(lineTo);
+        }
+        myPaths.add(new MyPath(pathNumber, path));
+
     }
 
-    public ArrayList<Double> getxCors() {
-        return xCors;
+    public int getPathNumber() {
+        return pathNumber;
     }
 
-    public void setxCors(ArrayList<Double> xCors) {
-        this.xCors = xCors;
+    public void setPathNumber(int pathNumber) {
+        this.pathNumber = pathNumber;
     }
 
-    public ArrayList<Double> getyCors() {
-        return yCors;
+    public Path getPath() {
+        return path;
     }
 
-    public void setyCors(ArrayList<Double> yCors) {
-        this.yCors = yCors;
+    public void setPath(Path path) {
+        this.path = path;
+    }
+
+    @Override
+    public String toString() {
+        return "MyPath{" +
+                "pathNumber=" + pathNumber +
+                ", path=" + path +
+                '}';
     }
 
     public static MyPath getPath(int pathNumber)

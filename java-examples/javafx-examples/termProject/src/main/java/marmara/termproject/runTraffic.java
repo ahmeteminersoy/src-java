@@ -1,10 +1,17 @@
 package marmara.termproject;
 
+import javafx.animation.AnimationTimer;
 import javafx.animation.KeyFrame;
+import javafx.animation.PathTransition;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.LineTo;
+import javafx.scene.shape.MoveTo;
+import javafx.scene.shape.Path;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import marmara.termproject.elements.items.Building;
@@ -18,6 +25,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
 
 public class runTraffic extends Application {
@@ -29,13 +37,32 @@ public class runTraffic extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        String inputTextAddress = "/Users/ahmeteminersoy/Desktop/level1.txt";
+        String inputTextAddress = "/Users/ahmeteminersoy/Desktop/level4.txt";
         readFiles(inputTextAddress, primaryStage);
-
-
+        makeCars();
+        carAnimation();
         initialize(primaryStage, primaryPane, width, height);
-        Car[] cars = makeCars();
-        runCars(cars);
+        primaryStage.show();
+
+
+    }
+    private void carAnimation()
+    {
+        Random r = new Random();
+        double num = r.nextDouble(800, 2000);
+        Iterator<Car> carIterator = Car.getCars().iterator();
+
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(num), event -> {
+            if (carIterator.hasNext()) {
+                //System.out.println(carIterator.next());
+                carIterator.next().runCar();
+            } else {
+                ((Timeline) event.getSource()).stop();
+            }
+        }));
+
+        timeline.setCycleCount(Timeline.INDEFINITE); // Animasyonu sürekli çalıştır
+        timeline.play(); // Animasyonu başlat
     }
     private void initialize(Stage primaryStage, Pane primaryPane, double width, double height)
     {
@@ -43,36 +70,15 @@ public class runTraffic extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-    private Car[] makeCars()
+    private void makeCars()
     {
         int n = MyPath.getPaths().size();
         Random r = new Random();
 
-        Car [] cars = new Car[metaData.getAllowedCars()];
-        for (int i = 0; i < cars.length; i ++)
+        for (int i = 0; i < 1000/*metaData.getAllowedCars()*/; i ++)
         {
-            cars[i] = new Car(MyPath.getPath(r.nextInt(n)));
+            new Car(MyPath.getPath(r.nextInt(n)));
         }
-
-        return cars;
-    }
-    private void runCars(Car[] cars)
-
-    {
-        Timeline timeline = new Timeline();
-        int[] count = {0};
-        for(Car car: cars) {
-            KeyFrame keyFrame = new KeyFrame(Duration.seconds(0.9 * (count[0] + 1)), event -> {
-
-                getPrimaryPane().getChildren().add(car.makeCar());
-                car.createTraffic();
-
-            });
-            timeline.getKeyFrames().add(keyFrame);
-            count[0]++;
-        }
-
-        timeline.play();
     }
     private void readFiles(String inputTextAddress, Stage primaryStage)
     {

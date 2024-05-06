@@ -1,110 +1,141 @@
 package marmara.termproject.elements.items;
 
 import javafx.animation.AnimationTimer;
+import javafx.animation.PathTransition;
 import javafx.animation.PauseTransition;
 import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 import marmara.termproject.elements.items.abstracts.item;
 import marmara.termproject.elements.map.MyPath;
 import marmara.termproject.elements.map.TrafficLight;
 import marmara.termproject.runTraffic;
 
+import java.util.ArrayList;
 import java.util.Random;
 
-import static marmara.termproject.runTraffic.metaData;
-import static marmara.termproject.runTraffic.trafficLights;
+import static marmara.termproject.runTraffic.*;
 
 public class Car extends item {
+    private static double time;
 
 
-    private int count = 0;
-    private double x, y;
+    private static final ArrayList<TrafficLight> trafficLights = runTraffic.trafficLights;
+
+
+
+    private static final ArrayList<Car> cars = new ArrayList<>();
+    private static final ArrayList<Car> carsThatRuns = new ArrayList<>();
+    private static int count = 0;
+    private static final double mNum = metaData.getWidth() / metaData.getCellsInXDirection();
+
     private final MyPath myPath;
-    private final Circle circle;
+
+
+    private final Rectangle rectangle;
 
 
     public Car(MyPath myPath) {
-        this.x = myPath.getxCors().getFirst();
-        this.y = myPath.getyCors().getFirst();
+        count++;
         this.myPath = myPath;
-        Circle circle = new Circle(0.09*(metaData.getWidth() / metaData.getCellsInXDirection()));
-        circle.setCenterX(x);
-        circle.setCenterY(y);
-        int n =  new Random().nextInt(6);
-        Color color = switch (n) {
-            case 0 -> Color.BLANCHEDALMOND;
-
-            case 1 -> Color.INDIANRED;
-
-            case 2 -> Color.BROWN;
-
-            case 3 -> Color.GREENYELLOW;
-
-            case 4 -> Color.DARKKHAKI;
-
-
-            default -> Color.DARKGREEN;
-
-        };
-        circle.setFill(color);
-        this.circle = circle;
+        Rectangle rectangle = new Rectangle(0, 0, 0.2 * (mNum), 0.1 * (mNum));
+        rectangle.setFill(Color.BLUE);
+        this.rectangle = rectangle;
+        cars.add(this);
     }
-    private void spawnCar()
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "myPath=" + myPath +
+                '}';
+    }
+
+    public void runCar()
     {
-        for (TrafficLight light : trafficLights) {
-            if (matchesLightPosition(x, y, light) && !light.isGreen()) {
-                return;  // Eğer sonraki pozisyon bir kırmızı ışıkta ise dur
-            }
-        }
-        try {
-            this.x = myPath.getxCors().get(count);
-            this.y = myPath.getyCors().get(count);
-            circle.setCenterX(x);
-            circle.setCenterY(y);
-            count++;
-            System.out.println("SPAWNED");
+        try
+        {
+            spawnCar();
+
         }
         catch (Exception e)
         {
-            disappear();
+            System.out.println(e.getMessage());
         }
 
     }
-    private boolean matchesLightPosition(double x, double y, TrafficLight light) {
-        return Math.abs(light.getX1() - x) < 20 && Math.abs(light.getY1() - y) < 20;  // Basit pozisyon kontrolü
-    }
-
-    private void disappear() {
-        Pane pane = runTraffic.getPrimaryPane();
-        PauseTransition pause = new PauseTransition(Duration.seconds(0.5));
-        pause.setOnFinished(event -> pane.getChildren().remove(circle));
-        pause.play();
-
-    }
-    public Node makeCar()
+    private void update()
     {
-        return this.circle;
+
     }
-    private double time;
-    public void createTraffic() {
-        AnimationTimer timer = new AnimationTimer() {
-            @Override
-            public void handle(long now) {
-                update();
+    private void spawnCar()
+    {
+        carsThatRuns.add(this);
+
+        PathTransition transition = new PathTransition();
+        transition.setNode(this.rectangle);
+        transition.setPath(myPath.getPath());
+        transition.setOrientation(PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT);
+        transition.setDuration(Duration.seconds(10));
+        transition.setCycleCount(1);
+
+        transition.setOnFinished(e -> rectangle.setVisible(false));
+        getPrimaryPane().getChildren().add(rectangle);
+        transition.currentTimeProperty().addListener((obs, oldTime, newTime) -> {
+            if (!checkTrafficLights()) {
+                transition.pause();
+            } else if (checkCollisions()) {
+                transition.pause();
+                handleCollision();
             }
-        };
-        timer.start();
+            //TODO
+            else {
+                transition.play();
+            }
+        });
+        transition.play();
+
     }
-    private void update() {
-        time += 0.16;
-        if(time > 2) {
-            if(Math.random() < 0.3) {
-                spawnCar();
+    private boolean checkTrafficLights() {
+        for (TrafficLight light : trafficLights) {
+            if (!(light.isGreen()) && rectangle.getBoundsInParent().intersects(light.getCircle().getBoundsInParent())) {
+                return false;
             }
-            time = 0;
         }
+        return true;
+    }
+    private void handleCollision() {
+        carsThatRuns.remove(this);
+        rectangle.setFill(Color.RED);  // Çarpışma durumunda arabanın rengini değiştir.
+        PauseTransition pause = new PauseTransition(Duration.seconds(0.5));
+        pause.setOnFinished(e -> rectangle.setVisible(false));  // 0.5 saniye sonra araba kaybolur.
+        pause.play();
+    }
+    private boolean checkCollisions() {
+        for (Car otherCar : carsThatRuns) {
+            if (otherCar != this && rectangle.getBoundsInParent().intersects(otherCar.rectangle.getBoundsInParent())) {
+                otherCar.handleCollision();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public static void setCount(int count) {
+        Car.count = count;
+    }
+
+    public Rectangle getRectangle() {
+        return rectangle;
+    }
+    public static ArrayList<Car> getCars() {
+        return cars;
     }
 }
