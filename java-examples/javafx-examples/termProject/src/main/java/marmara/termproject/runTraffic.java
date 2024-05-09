@@ -3,6 +3,7 @@ package marmara.termproject;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -10,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import marmara.termproject.elements.items.Building;
@@ -38,21 +40,51 @@ public class runTraffic extends Application {
     private static double height;
     public static ArrayList<TrafficLight> trafficLights = new ArrayList<>();
     private final static int numOfCars = 30;
+    private static String inputTextAddress;
 
     @Override
     public void start(Stage firstStage) throws IOException {
+        System.out.println("Çalışma dizini: " + System.getProperty("user.dir"));
+
         Image image = new Image("file:./pic.jpg");
         ImageView imageView = new ImageView(image);
-        Button btn = new Button("START");
+        Button btn1 = new Button("level1");
+        Button btn2 = new Button("level2");
+        Button btn3 = new Button("level3");
+        Button btn4 = new Button("level4");
+        Button btn5 = new Button("level5");
 
-        btn.setOnAction(event -> {
+        btn1.setOnAction(event -> {
+            inputTextAddress = "./src/main/java/marmara/termproject/levels/level1.txt";
             startProgram(firstStage);
         });
-
+        btn2.setOnAction(event -> {
+            inputTextAddress = "./src/main/java/marmara/termproject/levels/level2.txt";
+            startProgram(firstStage);
+        });
+        btn3.setOnAction(event -> {
+            inputTextAddress = "./src/main/java/marmara/termproject/levels/level3.txt";
+            startProgram(firstStage);
+        });
+        btn4.setOnAction(event -> {
+            inputTextAddress = "./src/main/java/marmara/termproject/levels/level4.txt";
+            startProgram(firstStage);
+        });
+        btn5.setOnAction(event -> {
+            inputTextAddress = "./src/main/java/marmara/termproject/levels/level5.txt";
+            startProgram(firstStage);
+        });
         StackPane root = new StackPane();
         root.getChildren().add(imageView);
-        root.getChildren().add(btn);
+        VBox box = new VBox(15);
 
+        box.setAlignment(Pos.CENTER);
+        box.getChildren().add(btn1);
+        box.getChildren().add(btn2);
+        box.getChildren().add(btn3);
+        box.getChildren().add(btn4);
+        box.getChildren().add(btn5);
+        root.getChildren().add(box);
 
         Scene scene = new Scene(root, 800, 800);
         firstStage.setTitle("Traffic Car Simulator");
@@ -66,7 +98,6 @@ public class runTraffic extends Application {
 
 
         Stage primaryStage = new Stage();
-        String inputTextAddress = "/Users/ahmeteminersoy/Desktop/level4.txt";
         readFiles(inputTextAddress);
         makeBoard();
         makeCars();
