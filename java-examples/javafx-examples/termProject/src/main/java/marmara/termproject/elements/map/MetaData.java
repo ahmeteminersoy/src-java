@@ -1,5 +1,6 @@
 package marmara.termproject.elements.map;
 
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -69,10 +70,10 @@ public class MetaData {
         this.winGame = winGame;
         this.allowedCars = allowedCars;
     }
-    public Pane make(){
+    public Group make(){
         double cellWidth = width / cellsInXDirection;
         double cellHeight = height / cellsInYDirection;
-        Pane gridPane= new Pane();
+        Group GroupPane= new Group();
 
         for (int i = 0; i < cellsInXDirection; i++)
             for (int j = 0; j < cellsInYDirection; j++)
@@ -81,8 +82,8 @@ public class MetaData {
                 cell.setStroke(Color.CYAN);
                 cell.setFill(Color.LIGHTCYAN);
                 cell.setStrokeWidth(0.2);
-                gridPane.getChildren().add(cell);
+                GroupPane.getChildren().add(cell);
             }
-        return gridPane;
+        return GroupPane;
     }
 }

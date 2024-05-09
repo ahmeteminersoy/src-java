@@ -69,7 +69,6 @@ public class MyPath extends Path {
                 ", path=" + path +
                 '}';
     }
-
     public static MyPath getPath(int pathNumber)
     {
         for (MyPath myPath : myPaths)

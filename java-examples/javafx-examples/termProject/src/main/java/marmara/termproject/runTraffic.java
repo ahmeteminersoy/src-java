@@ -1,17 +1,15 @@
 package marmara.termproject;
 
-import javafx.animation.AnimationTimer;
 import javafx.animation.KeyFrame;
-import javafx.animation.PathTransition;
 import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.LineTo;
-import javafx.scene.shape.MoveTo;
-import javafx.scene.shape.Path;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import marmara.termproject.elements.items.Building;
@@ -29,16 +27,48 @@ import java.util.Iterator;
 import java.util.Random;
 
 public class runTraffic extends Application {
+
+    public static int score;
+    public static Label scoreLabel = new Label("Score: " + score);
+    public static int crashes;
+    public static Label crashesLabel = new Label("Crashes: " + crashes);
     public static MetaData metaData;
-    private static Pane primaryPane;
+    private static Group primaryPane;
     private static double width;
     private static double height;
     public static ArrayList<TrafficLight> trafficLights = new ArrayList<>();
+    private final static int numOfCars = 30;
 
     @Override
-    public void start(Stage primaryStage) throws IOException {
+    public void start(Stage firstStage) throws IOException {
+        Image image = new Image("file:./pic.jpg");
+        ImageView imageView = new ImageView(image);
+        Button btn = new Button("START");
+
+        btn.setOnAction(event -> {
+            startProgram(firstStage);
+        });
+
+        StackPane root = new StackPane();
+        root.getChildren().add(imageView);
+        root.getChildren().add(btn);
+
+
+        Scene scene = new Scene(root, 800, 800);
+        firstStage.setTitle("Traffic Car Simulator");
+        firstStage.setScene(scene);
+        firstStage.show();
+
+    }
+    private void startProgram(Stage firstStage)
+    {
+        firstStage.close();
+
+
+        Stage primaryStage = new Stage();
         String inputTextAddress = "/Users/ahmeteminersoy/Desktop/level4.txt";
-        readFiles(inputTextAddress, primaryStage);
+        readFiles(inputTextAddress);
+        makeBoard();
         makeCars();
         carAnimation();
         initialize(primaryStage, primaryPane, width, height);
@@ -46,28 +76,51 @@ public class runTraffic extends Application {
 
 
     }
+    private void makeBoard()
+    {
+        scoreLabel.setLayoutX(10);  // X koordinatı
+        scoreLabel.setLayoutY(10);  // Y koordinatı
+
+        // Crashes Label'ını oluştur
+        crashesLabel.setLayoutX(10);  // X koordinatı
+        crashesLabel.setLayoutY(30);  // Y koordinatı
+        primaryPane.getChildren().add(scoreLabel);
+        primaryPane.getChildren().add(crashesLabel);
+
+    }
     private void carAnimation()
     {
         Random r = new Random();
-        double num = r.nextDouble(800, 2000);
+        double num = r.nextDouble(0.9, 1.4);
         Iterator<Car> carIterator = Car.getCars().iterator();
 
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(num), event -> {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(num), event -> {
             if (carIterator.hasNext()) {
-                //System.out.println(carIterator.next());
+                System.out.println("CAR YAPTI");
                 carIterator.next().runCar();
             } else {
-                ((Timeline) event.getSource()).stop();
+                makeNewStage();
+                Object source = event.getSource();
+                if (source instanceof Timeline) {
+                    ((Timeline) source).stop();
+                } else {
+                    System.out.println("Event source is not a Timeline: " + source.getClass());
+                }
             }
         }));
 
-        timeline.setCycleCount(Timeline.INDEFINITE); // Animasyonu sürekli çalıştır
+        timeline.setCycleCount(runTraffic.numOfCars); // Animasyonu sürekli çalıştır
         timeline.play(); // Animasyonu başlat
     }
-    private void initialize(Stage primaryStage, Pane primaryPane, double width, double height)
+    private void makeNewStage()
+    {
+        System.out.println("Hello Guys");
+    }
+    private void initialize(Stage primaryStage, Group primaryPane, double width, double height)
     {
         Scene scene = new Scene(primaryPane, width, height);
         primaryStage.setScene(scene);
+        primaryStage.setTitle("Traffic Control Simulator");
         primaryStage.show();
     }
     private void makeCars()
@@ -75,12 +128,12 @@ public class runTraffic extends Application {
         int n = MyPath.getPaths().size();
         Random r = new Random();
 
-        for (int i = 0; i < 1000/*metaData.getAllowedCars()*/; i ++)
+        for (int i = 0; i < numOfCars/*metaData.getAllowedCars()*/; i ++)
         {
             new Car(MyPath.getPath(r.nextInt(n)));
         }
     }
-    private void readFiles(String inputTextAddress, Stage primaryStage)
+    private void readFiles(String inputTextAddress)
     {
         try {
             FileReader fileReader = new FileReader(inputTextAddress);
@@ -183,7 +236,7 @@ public class runTraffic extends Application {
     public static void main(String[] args) {
         launch();
     }
-    public static Pane getPrimaryPane() {
+    public static Group getPrimaryPane() {
         return primaryPane;
     }
 }

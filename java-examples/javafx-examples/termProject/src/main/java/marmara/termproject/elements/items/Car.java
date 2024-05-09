@@ -1,13 +1,9 @@
 package marmara.termproject.elements.items;
 
-import javafx.animation.AnimationTimer;
-import javafx.animation.PathTransition;
-import javafx.animation.PauseTransition;
-import javafx.scene.Node;
-import javafx.scene.layout.Pane;
+import javafx.animation.*;
+import javafx.application.Platform;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.*;
 import javafx.util.Duration;
 import marmara.termproject.elements.items.abstracts.item;
 import marmara.termproject.elements.map.MyPath;
@@ -15,12 +11,10 @@ import marmara.termproject.elements.map.TrafficLight;
 import marmara.termproject.runTraffic;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 import static marmara.termproject.runTraffic.*;
 
 public class Car extends item {
-    private static double time;
 
 
     private static final ArrayList<TrafficLight> trafficLights = runTraffic.trafficLights;
@@ -33,9 +27,11 @@ public class Car extends item {
     private static final double mNum = metaData.getWidth() / metaData.getCellsInXDirection();
 
     private final MyPath myPath;
+    private PathTransition pathTransition;
 
 
     private final Rectangle rectangle;
+
 
 
     public Car(MyPath myPath) {
@@ -51,6 +47,7 @@ public class Car extends item {
     public String toString() {
         return "Car{" +
                 "myPath=" + myPath +
+                ", count=" + count +
                 '}';
     }
 
@@ -58,8 +55,8 @@ public class Car extends item {
     {
         try
         {
+            getPrimaryPane().getChildren().add(rectangle);
             spawnCar();
-
         }
         catch (Exception e)
         {
@@ -67,38 +64,44 @@ public class Car extends item {
         }
 
     }
-    private void update()
-    {
-
-    }
-    private void spawnCar()
-    {
+    private void spawnCar() {
+        final boolean [] isFinished = {false};
+        double length = calculatePathLength(myPath.getPath());
+        double speed = 90; // pixels per second
+        double durationInSeconds = length / speed;
         carsThatRuns.add(this);
 
-        PathTransition transition = new PathTransition();
-        transition.setNode(this.rectangle);
-        transition.setPath(myPath.getPath());
-        transition.setOrientation(PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT);
-        transition.setDuration(Duration.seconds(10));
-        transition.setCycleCount(1);
-
-        transition.setOnFinished(e -> rectangle.setVisible(false));
-        getPrimaryPane().getChildren().add(rectangle);
-        transition.currentTimeProperty().addListener((obs, oldTime, newTime) -> {
-            if (!checkTrafficLights()) {
-                transition.pause();
-            } else if (checkCollisions()) {
-                transition.pause();
-                handleCollision();
-            }
-            //TODO
-            else {
-                transition.play();
-            }
+        this.pathTransition = new PathTransition();
+        this.pathTransition.setNode(this.rectangle);
+        pathTransition.setPath(myPath.getPath());
+        pathTransition.setOrientation(PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT);
+        pathTransition.setDuration(Duration.seconds(durationInSeconds));
+        pathTransition.setOnFinished(event -> {
+            handleCarFinish();
+            isFinished[0] = true;
         });
-        transition.play();
+        if (isFinished[0])
+        {
+            pathTransition = null;
+            carsThatRuns.remove(this);
+            getPrimaryPane().getChildren().remove(rectangle);
+            return;
+        }
+
+        pathTransition.play();
+        new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                updateCar();
+            }
+        }.start();
+
+
+
 
     }
+
+
     private boolean checkTrafficLights() {
         for (TrafficLight light : trafficLights) {
             if (!(light.isGreen()) && rectangle.getBoundsInParent().intersects(light.getCircle().getBoundsInParent())) {
@@ -107,11 +110,49 @@ public class Car extends item {
         }
         return true;
     }
-    private void handleCollision() {
+    private void handleCarFinish() {
+        System.out.printf("GAZA OLDU %s%n", this);
         carsThatRuns.remove(this);
-        rectangle.setFill(Color.RED);  // Çarpışma durumunda arabanın rengini değiştir.
+        score++;
+        updateScoreDisplay();
+        this.pathTransition.stop();
+        getPrimaryPane().getChildren().remove(rectangle);
+    }
+
+    private void updateCar() {
+        if (!checkTrafficLights()) {
+            pathTransition.pause();
+        } else if (checkCollisions()) {
+            handleCollision();
+            crashes++;
+            updateCrashDisplay();
+        } else if (pathTransition.getStatus() != Animation.Status.RUNNING) {
+            pathTransition.play();
+        }
+    }
+
+    private void updateScoreDisplay() {
+        Platform.runLater(() -> scoreLabel.setText("Score: " + score));
+    }
+
+    private void updateCrashDisplay() {
+        Platform.runLater(() -> crashesLabel.setText("Crashes: " + crashes));
+    }
+    private void handleCollision() {
+
+
+        carsThatRuns.remove(this);
+        rectangle.setFill(Color.RED);
+        pathTransition.pause();
+
         PauseTransition pause = new PauseTransition(Duration.seconds(0.5));
-        pause.setOnFinished(e -> rectangle.setVisible(false));  // 0.5 saniye sonra araba kaybolur.
+
+
+        pause.setOnFinished(e -> {
+            getPrimaryPane().getChildren().remove(pathTransition.getNode());
+            pathTransition.play();
+        });
+
         pause.play();
     }
     private boolean checkCollisions() {
@@ -123,19 +164,33 @@ public class Car extends item {
         }
         return false;
     }
+    private double calculatePathLength(Path path) {
+        double totalLength = 0;
+        double lastX = 20, lastY = 20; // Başlangıç noktası
+        for (PathElement element : path.getElements()) {
+            if (element instanceof MoveTo move) {
+                lastX = move.getX();
+                lastY = move.getY();
+            } else if (element instanceof LineTo line) {
+                double deltaX = line.getX() - lastX;
+                double deltaY = line.getY() - lastY;
+                totalLength += Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+                lastX = line.getX();
+                lastY = line.getY();
+            }
+        }
+        return totalLength;
+    }
 
     public static int getCount() {
         return count;
     }
 
-    public static void setCount(int count) {
-        Car.count = count;
-    }
-
-    public Rectangle getRectangle() {
-        return rectangle;
-    }
     public static ArrayList<Car> getCars() {
         return cars;
+    }
+
+    public PathTransition getPathTransition() {
+        return pathTransition;
     }
 }
