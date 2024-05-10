@@ -28,6 +28,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
+// Ahmet Emin Ersoy 150123526
+// Yusuf Demir 150122017
+// Fecri Duman 150123851
 public class runTraffic extends Application {
 
     public static int score;
