@@ -39,13 +39,11 @@ public class runTraffic extends Application {
     private static double width;
     private static double height;
     public static ArrayList<TrafficLight> trafficLights = new ArrayList<>();
-    private final static int numOfCars = 30;
+    private final static int numOfCars = 500;
     private static String inputTextAddress;
 
     @Override
     public void start(Stage firstStage) throws IOException {
-        System.out.println("Çalışma dizini: " + System.getProperty("user.dir"));
-
         Image image = new Image("file:./pic.jpg");
         ImageView imageView = new ImageView(image);
         Button btn1 = new Button("level1");
@@ -127,10 +125,8 @@ public class runTraffic extends Application {
 
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(num), event -> {
             if (carIterator.hasNext()) {
-                System.out.println("CAR YAPTI");
                 carIterator.next().runCar();
             } else {
-                makeNewStage();
                 Object source = event.getSource();
                 if (source instanceof Timeline) {
                     ((Timeline) source).stop();
@@ -142,10 +138,6 @@ public class runTraffic extends Application {
 
         timeline.setCycleCount(runTraffic.numOfCars); // Animasyonu sürekli çalıştır
         timeline.play(); // Animasyonu başlat
-    }
-    private void makeNewStage()
-    {
-        System.out.println("Hello Guys");
     }
     private void initialize(Stage primaryStage, Group primaryPane, double width, double height)
     {

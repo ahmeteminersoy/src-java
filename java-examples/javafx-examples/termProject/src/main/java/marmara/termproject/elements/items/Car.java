@@ -111,7 +111,6 @@ public class Car extends item {
         return true;
     }
     private void handleCarFinish() {
-        System.out.printf("GAZA OLDU %s%n", this);
         carsThatRuns.remove(this);
         score++;
         updateScoreDisplay();
